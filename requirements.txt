@@ -1,0 +1,6 @@
+# For backend websocket server
+websockets>=10.0
+# For backend and subscriber MQTT communication
+paho-mqtt>=1.6.0,<2.0.0
+# For subscriber serial communication
+pyserial>=3.0
