@@ -3,41 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphical Light Scheduler</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: sans-serif; }
-    </style>
+    <title>Light Scheduler</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Graphical Light Scheduler</h1>
+<body>
+    <div class="container">
+        <h1>Light Scheduler</h1>
+        <div class="schedule-form">
+            <label for="on-time">ON Time (HH:MM):</label>
+            <input type="time" id="on-time" name="on-time" required>
 
-        <div id="connection-status" class="mb-4 p-2 text-center text-sm rounded-md bg-yellow-100 text-yellow-700">
-            Connecting to server...
+            <label for="off-time">OFF Time (HH:MM):</label>
+            <input type="time" id="off-time" name="off-time" required>
+
+            <button id="submit-schedule">Set Schedule</button>
         </div>
-
-        <form id="schedule-form" class="space-y-4">
-            <div class="flex items-center space-x-4">
-                <label for="onTimeInput" class="w-20 text-right text-gray-600 font-medium">On Time:</label>
-                <input type="time" id="onTimeInput" name="on_time" required
-                       class="flex-grow p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-            </div>
-
-            <div class="flex items-center space-x-4">
-                <label for="offTimeInput" class="w-20 text-right text-gray-600 font-medium">Off Time:</label>
-                <input type="time" id="offTimeInput" name="off_time" required
-                       class="flex-grow p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
-            </div>
-
-            <button type="submit" id="submit-button"
-                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
-                Submit Schedule
-            </button>
-        </form>
-
-        <div id="response-message" class="mt-4 p-2 text-center text-sm rounded-md hidden"></div>
-
+        <div id="status">Connecting to server...</div>
     </div>
 
     <script src="script.js"></script>
