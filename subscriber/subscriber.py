@@ -186,7 +186,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Setup MQTT Client
-    mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id=MQTT_CLIENT_ID)
+    mqtt_client = mqtt.Client(client_id=MQTT_CLIENT_ID)
     mqtt_client.on_connect = on_connect
     mqtt_client.on_disconnect = on_disconnect
     mqtt_client.on_message = on_message

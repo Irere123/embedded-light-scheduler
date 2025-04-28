@@ -33,7 +33,7 @@ def on_disconnect(client, userdata, rc, properties=None): # Adjusted for paho-mq
 def on_publish(client, userdata, mid, properties=None): # Adjusted for paho-mqtt v2
     logging.info(f"MQTT Message Published (MID: {mid}) to topic {MQTT_TOPIC}")
 
-mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id=MQTT_CLIENT_ID)
+mqtt_client = mqtt.Client(client_id=MQTT_CLIENT_ID)
 mqtt_client.on_connect = on_connect
 mqtt_client.on_disconnect = on_disconnect
 mqtt_client.on_publish = on_publish
