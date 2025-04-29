@@ -35,7 +35,7 @@ The architecture uses WebSockets for communication between the frontend and a ba
 
 ### Backend Server Log Example
 ![Backend Log](./assets/light-2.png "Backend Server Log Output showing WebSocket connection and MQTT publishing")
-
+NOTE: > The subscriber does not because it requires you to hardware with ardiuno board and configure the real PORT
 ### Subscriber Log Example
 ![Subscriber Log](./assets/light-2.png "Subscriber Script Log Output showing MQTT connection, schedule reception, and serial commands")
 
